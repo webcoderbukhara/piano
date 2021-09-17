@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    .logo {
+        position: absolute;
+        z-index: 11111111111;
+        bottom: 2%;
+        right: 2%;
+        width: 10%;
+        animation: asd 3s linear alternate infinite;
+    }
+    @keyframes asd {
+        to {
+            transform: translateY(-5px) scale(1);
+        }
+        from {
+            transform: translateY(0px) scale(1.05);
+        }
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 5vh;
+        z-index: 1111111;
+        font-size: 100px;
+        letter-spacing: 0.08em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        text-shadow: 5px 5px #ff1f8f, 9px 9px #000000;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .piano {
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: .7rem;
+            .btn {
+                width: 60px;
+                height: 100px;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            .btn-light {
+                background-color: #f8f9fad5;
+                border: 1px solid #f0eaeadc;
+                box-shadow: 0 1px 3px #222;
+                position: relative;
+                &:hover,
+                &:active {
+                    background-color: #f7eeee;
+                    box-shadow: inset 0 0 5px #f80505;
+                }
+                &::after {
+                    position: absolute;
+                    content: "🎵";
+                    left: 2.5%;
+                    bottom: 2.5%;
+                    font-size: .6rem;
+                }
+            }
+            .btn-dark {
+                position: absolute;
+                width: 40px;
+                height: 60px;
+                top: 0;
+                background: #212529d5;
+                border: 1px solid #000000dc;
+                box-shadow: 0 1px 3px #222;
+                &:hover,
+                &:active {
+                    background-color: #212529;
+                    box-shadow: inset 0 0 15px #230446;
+                }
+            }
+        }
+        .piano-hight {
+            .btn-light {
+                border: 1px solid #4ae005;
+            }
+        }
+        .piano-hight {
+            .btn-light {
+                border: 1px solid #5608e6;
+            }
+        }
+        .piano-middle {
+            .btn-light {
+                border: 1px solid #e005b0;
+            }
+        }
+    }
+    section {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        animation: bgColor 20s linear infinite;
+        overflow: hidden;
+    }
+    .bgPulse {
+        width: 100%;
+        height: 100%;
+    }
+    .bgPulse img {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+    }
+    .bgPulse img:nth-child(3n+1) {
+        background-color: transparent;
+    }
+    .bgPulse img:nth-child(1) {
+        top: 50%;
+        left: 20%;
+        animation: animate 10s linear infinite;
+    }
+    .bgPulse img:nth-child(2) {
+        top: 80%;
+        left: 40%;
+        animation: animate 12s linear infinite;
+    }
+    .bgPulse img:nth-child(3) {
+        top: 10%;
+        left: 65%;
+        animation: animate 15s linear infinite;
+    }
+    .bgPulse img:nth-child(4) {
+        top: 50%;
+        left: 70%;
+        animation: animate 6s linear infinite;
+    }
+    .bgPulse img:nth-child(5) {
+        top: 10%;
+        left: 30%;
+        animation: animate 9s linear infinite;
+    }
+    .bgPulse img:nth-child(6) {
+        top: 90%;
+        left: 95%;
+        animation: animate 8s linear infinite;
+    }
+    .bgPulse img:nth-child(7) {
+        top: 80%;
+        left: 5%;
+        animation: animate 5s linear infinite;
+    }
+    .bgPulse img:nth-child(8) {
+        top: 35%;
+        left: 50%;
+        animation: animate 14s linear infinite;
+    }
+    .bgPulse img:nth-child(9) {
+        top: 5%;
+        left: 5%;
+        animation: animate 11s linear infinite;
+    }
+    .bgPulse img:nth-child(10) {
+        top: 25%;
+        left: 90%;
+        animation: animate 10s linear infinite;
+    }
+    @keyframes animate {
+        0% {
+            transform: scale(0) translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1) translateY(-100px);
+            opacity: 0;
+        }
+    }
+    @keyframes bgColor {
+        0% {
+            background: #F44336;
+        }
+        25% {
+            background: #03A9F4;
+        }
+        50% {
+            background: #9C27B0;
+        }
+        75% {
+            background: #00FF0A;
+        }
+        100% {
+            background: #F44336;
+        }
+    }
+    .mosque {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+        pointer-events: none;
+        animation: animate12 10s linear alternate infinite;
+    }
+    @keyframes animate12 {
+        to {
+            opacity: .3;
+            transform: scale(1);
+        }
+        from {
+            opacity: .5;
+            transform: scale(1.1);
+        }
+    }
+    overflow: hidden;
+    .my_info {
+        position: absolute;
+        left: 2%;
+        bottom: 2%;
+        a {
+            text-decoration: none;
+            img {
+                width: 4%;
+                margin: .3%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    body {
+        h1 {
+            font-size: 80px;
+        }
+        .container {
+            .piano {
+                .btn {
+                    width: 50px;
+                    height: 80px;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                .btn-dark {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 745px) {
+    body {
+        h1 {
+            font-size: 60px;
+        }
+        .container {
+            .piano {
+                .btn {
+                    width: 40px;
+                    height: 70px;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                .btn-dark {
+                    width: 20px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 607px) {
+    body {
+        h1 {
+            font-size: 75px;
+        }
+        .container {
+            .piano {
+                .btn {
+                    width: 60px;
+                    height: 100px;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                .btn-dark {
+                    width: 40px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 529px) {
+    body {
+        h1 {
+            font-size: 60px;
+        }
+        .container {
+            .piano {
+                .btn {
+                    width: 50px;
+                    height: 90px;
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                .btn-dark {
+                    width: 30px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        h1 {
+            font-size: 50px;
+        }
+        .container {
+            .piano {
+                .btn {
+                    width: 40px;
+                    height: 75px;
+                    border-bottom-left-radius: 2px;
+                    border-bottom-right-radius: 2px;
+                }
+                .btn-dark {
+                    width: 20px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
